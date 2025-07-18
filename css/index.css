@@ -1,0 +1,651 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-math-bg) 100%
+  );
+  color: var(--color-white);
+  overflow: hidden;
+  margin: 0 -1rem;
+  padding: 2rem 1rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="math" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><text x="10" y="15" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.1)">∑</text></pattern></defs><rect width="100" height="100" fill="url(%23math)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    45deg,
+    var(--color-white),
+    var(--color-math-accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.hero-slogan {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img-placeholder {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-large);
+}
+
+/* Math Challenge Section */
+.math-challenge {
+  padding: 5rem 0;
+  background: var(--color-light);
+  margin: 0 -1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.math-challenge-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.math-challenge-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.math-challenge-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-large);
+  box-shadow: 0 15px 35px var(--color-shadow);
+  margin: 0 auto;
+  display: block;
+}
+
+.math-challenge-content {
+  background: var(--color-white);
+  padding: 2.5rem;
+  border-radius: var(--radius-large);
+  box-shadow: 0 10px 30px var(--color-shadow);
+}
+
+.math-challenge-content h3 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.math-challenge-content h3:first-child {
+  margin-top: 0;
+}
+
+.math-challenge-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.math-challenge-content li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.math-challenge-content li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Features Section */
+.features {
+  padding: 5rem 0;
+  background: var(--color-white);
+}
+
+.features-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.features-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  margin-bottom: 4rem;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.feature-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-large);
+  box-shadow: 0 8px 25px var(--color-shadow);
+  text-align: center;
+  transition: all var(--transition-main);
+  border: 2px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px var(--color-shadow);
+  border-color: var(--color-math-accent);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--icon-bg);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  font-weight: bold;
+  position: relative;
+}
+
+.feature-icon::after {
+  content: "∑";
+  font-size: 2rem;
+}
+
+.feature-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* How to Play Section */
+.how-to-play {
+  padding: 5rem 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-light) 0%,
+    var(--color-white) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.how-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.how-desc {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.how-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.how-block {
+  background: var(--color-white);
+  padding: 2.5rem;
+  border-radius: var(--radius-large);
+  box-shadow: 0 10px 30px var(--color-shadow);
+}
+
+.how-block-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.how-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.how-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--color-light);
+  border-radius: var(--radius-main);
+  transition: all var(--transition-main);
+}
+
+.how-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px var(--color-shadow);
+}
+
+.how-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--icon-bg);
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.how-bg-tiles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="50" text-anchor="middle" font-size="20" fill="rgba(44,62,80,0.1)">∑</text></svg>');
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Math Benefits Section */
+.math-benefits {
+  padding: 5rem 0;
+  background: var(--color-light);
+  margin: 0 -1rem;
+}
+
+.math-benefits-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.math-benefits-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.math-benefits-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-large);
+  box-shadow: 0 15px 35px var(--color-shadow);
+  margin: 0 auto;
+  display: block;
+}
+
+.math-benefits-content {
+  background: var(--color-white);
+  padding: 2.5rem;
+  border-radius: var(--radius-large);
+  box-shadow: 0 10px 30px var(--color-shadow);
+}
+
+.math-benefits-content h3 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.math-benefits-content h3:first-child {
+  margin-top: 0;
+}
+
+.math-benefits-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.math-benefits-content li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.math-benefits-content li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Reviews Section */
+.reviews {
+  padding: 5rem 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-white) 0%,
+    var(--color-light) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="50" text-anchor="middle" font-size="20" fill="rgba(44,62,80,0.05)">⭐</text></svg>');
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.reviews-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.review {
+  background: var(--color-white);
+  padding: 2.5rem;
+  border-radius: var(--radius-large);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-main);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.review::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-math-accent),
+    var(--color-primary)
+  );
+}
+
+.review:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-math-accent);
+}
+
+.review-user {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-style: italic;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .math-challenge-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .math-benefits-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .how-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .features-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-slogan {
+    font-size: 1.5rem;
+  }
+
+  .features-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reviews-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 60vh;
+    padding: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-slogan {
+    font-size: 1.1rem;
+  }
+
+  .features-title,
+  .how-title {
+    font-size: 2rem;
+  }
+
+  .math-challenge-content,
+  .how-block {
+    padding: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .review {
+    padding: 1.5rem;
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 5rem 0;
+  background: var(--color-light);
+  margin: 0 -1rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.faq-item {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-main);
+  box-shadow: 0 5px 15px var(--color-shadow);
+  transition: all var(--transition-main);
+  border-left: 4px solid var(--color-math-accent);
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px var(--color-shadow);
+}
+
+.faq-item h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.faq-item p {
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    padding: 1.5rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,22 @@
+:root {
+  --color-bg: #f8f9fa;
+  --color-primary: #2c3e50;
+  --color-accent: #e74c3c;
+  --color-secondary: #3498db;
+  --color-success: #27ae60;
+  --color-warning: #f39c12;
+  --color-text: #2c3e50;
+  --color-muted: #7f8c8d;
+  --color-white: #ffffff;
+  --color-light: #ecf0f1;
+  --color-dark: #1a252f;
+  --color-shadow: rgba(44, 62, 80, 0.15);
+  --color-math-bg: #34495e;
+  --color-math-accent: #e67e22;
+  --radius-main: 12px;
+  --radius-large: 20px;
+  --transition-main: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-main: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    "Roboto", "Helvetica Neue", sans-serif;
+  --font-math: "Courier New", "Monaco", "Consolas", monospace;
+}
